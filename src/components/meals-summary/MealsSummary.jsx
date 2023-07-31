@@ -44,6 +44,14 @@ const MealsSummaryContainer = styled('div') `
     border-radius: 16px;
     padding: 1rem;
     box-shadow: 0px 6px 16px 0px #0000004d;
-    margin-top: -10rem;
+    margin-top: -7rem;
     position: relative;
+
+    & > h2 {
+        font-size: 2rem;
+
+    }
+    & > p{
+        margin-top: 2rem;
+    }
 `
