@@ -23,7 +23,8 @@ const StyledMealItem = styled('div')`
     align-items: center;
     padding: 30px;
     border-bottom: 1px solid 
-#D6D6D6;
+    #D6D6D6;
+    margin: 1rem;
 `
 
 const StyledText = styled('p')`
