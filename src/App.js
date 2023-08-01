@@ -10,10 +10,7 @@ function App() {
       <MealsSummary/>
       <Meals/>
    
-      {/* <Header/>
-      <MealsSummary/>
-      <Meals/>
-      <MealItem/> */}
+  
       
     </div> 
   );

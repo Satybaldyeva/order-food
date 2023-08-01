@@ -2,7 +2,7 @@ import React from 'react'
 import { MealItem } from './MealItem';
 import {styled} from 'styled-components'
 
-export const Meals = () => {
+
 
     const DUMMY_MEALS = [
         {
@@ -30,16 +30,27 @@ export const Meals = () => {
           price: 19.99,
         },
        ];
+
+export const Meals = () => {     
        
   return (
    <StyledContainer>
-    {DUMMY_MEALS.map((item)=>(
-       <MealItem key={item.id}>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <p>{item.price}</p>
-       </MealItem>
-    ))}
+    <ul>
+      {DUMMY_MEALS.map((item)=>{
+        return (
+          <MealItem 
+             key={item.id}
+             title={item.title}
+             description={item.description}
+             price={item.price}
+             id={item.id}>
+          
+         </MealItem>
+        )
+      
+      })}
+    </ul>
+ 
    </StyledContainer>
   )
 }
@@ -47,9 +58,29 @@ export const Meals = () => {
 const StyledContainer = styled('div')`
     background-color: white;
     border-radius:16px ;
-    padding-left: 30px;
     width: 80%;
-    margin: 1rem 8rem;
+    margin: 2rem auto;
     align-items: center;
+    padding: 40px;
+    max-width: 60rem;
+    animation: meals-appear 1s ease-out forwards;
+
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      list-style: none;
+    }
+
+    @keyframes meals-appear {
+		from {
+			opacity: 0;
+			transform: translateY(3rem);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 
 `
