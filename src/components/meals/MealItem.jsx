@@ -3,14 +3,14 @@ import { MealItemForm } from './MealItemForm'
 import {styled} from 'styled-components'
 
 export const MealItem = ({title, description, price, id}) => {
-    const {onAddMeal} = useContext(CartContext)
+    // const {onAddMeal} = useContext(CartContext)
     const addMealToCartHandler = (amount) =>{
-        onAddMeal({
-            title,
-            price,
-            amount,
-            id
-        })
+        // onAddMeal({
+        //     title,
+        //     price,
+        //     amount,
+        //     id
+        // })
     }
   return (
     <StyledMealItem>

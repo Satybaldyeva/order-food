@@ -2,6 +2,7 @@ import React from 'react'
 import {styled} from 'styled-components'
 import {Button} from '../UI/Button'
 import {PlusIcon} from '../../assets'
+import { useState } from 'react'
 
 export const MealItemForm = ({inputId, onAddMeal}) => {
   const [enteredAmount, setEnteredAmount]= useState(1)
