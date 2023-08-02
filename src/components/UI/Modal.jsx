@@ -1,24 +1,29 @@
 import React from 'react'
 import {styled} from 'styled-components'
-import { ReactDOM } from 'react-dom'
+import { createPortal } from 'react-dom'
 
 const Backdrop = ({onClose})=>{
-    return <BackdropContainer></BackdropContainer>
+    return <BackdropContainer onClick = {onClose}></BackdropContainer>
 }
+
+const BACKDROP_ELEMENT = document.getElementById('backdrop');
+const MODAL_ELEMENT = document.getElementById('modal');
 
 export const Modal = ({children, onClose}) => {
 
 
   return (
   <>
-  {ReactDOM.createPortal(
+  {createPortal(
       <Backdrop onClose={onClose}/>, 
-      document.getElementById('backdrop'),
+      BACKDROP_ELEMENT
   )}
-  
-    <ModalContainer>
-        {children}
-    </ModalContainer>
+   {createPortal(  <ModalContainer>
+         {children}
+     </ModalContainer>, MODAL_ELEMENT)
+       
+   }
+   
   </>
   )
 }
