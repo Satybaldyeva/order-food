@@ -5,7 +5,7 @@ export const CartContext = React.createContext({
     totalAmount: 0,
     onAddMeal: ()=>{},
     onIncreaseMealsAmount: ()=>{},
-    onDecreaseMealsAmountHandler: ()=>{},
+    onDecreaseMealsAmount: ()=>{},
 })
 
 
@@ -144,7 +144,7 @@ export const CartProvider = ({children})=>{
             onAddMeal: addMealsHandler, 
             totalAmount: 0,
             onIncreaseMealsAmount: increaseMealAmountHandler,
-            onDecreaseMealsAmountHandler:decreaseMealAmountHandler,
+            onDecreaseMealsAmount:decreaseMealAmountHandler,
         }}>
             {children}
         </CartContext.Provider>
