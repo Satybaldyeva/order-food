@@ -19,6 +19,7 @@ export const Cart = ({ onClose }) => {
 							amount={meal.amount}
 							price={meal.price}
 							key={meal.id}
+							id={meal.id}
 						/>
 					))}
 				</CartList>
